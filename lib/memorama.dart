@@ -6,7 +6,7 @@ class Principal extends StatefulWidget {
   @override
   State<Principal> createState() => _PrincipalState();
 }
-
+//colores definidos y tiene suffle para cambiar
 class _PrincipalState extends State<Principal> {
   final List<Color> _colores = [
     Colors.purple, Colors.green, Colors.orange, Colors.pink,
@@ -76,6 +76,7 @@ class _PrincipalState extends State<Principal> {
                   child: AspectRatio(
                     aspectRatio: 1.0, 
                     child: InkWell(
+                      // Si _juegoTerminado es true, desactiva el onTap 
                       onTap: _juegoTerminado ? null : () {
                         //Comprobar si esta volteado
                         if (!_estanVolteados[0]) {
